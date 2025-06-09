@@ -1,5 +1,4 @@
 # LaTeX build artifacts
-*.aux
 *.blg
 *.brf
 *.fdb_latexmk
@@ -12,5 +11,3 @@
 *.lot
 *.nav
 *.snm
-
-

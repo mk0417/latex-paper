@@ -20,7 +20,12 @@ The template is documented at https://pascalmichaillat.org/a/.
 + Compile `paper.tex` with pdfTeX. This will generate a PDF file of your paper named `paper.pdf`.
 + The LaTeX style file `paper.sty` formats the paper. It must be included in the same folder as `paper.tex`. It can be modified to alter the paper's format.
 + The BibTeX style file `bibliography.bst` formats the bibliography. It must be included in the same folder as `paper.tex`. It can be modified to alter the bibliography's format. The style file is based on `econ.bst`, which was created by Shiro Takeda and is [available on GitHub](https://github.com/ShiroTakeda/econ-bst).
-+ The file `paper.pdf` is not required to use the template. It only illustrates the output of the template and will be overwritten when `paper.tex` is compiled.
+
+A few files are not required to use the paper template but are useful for other purposes:
+
++ The file `paper.pdf` is not required, but it illustrates the output of the template. It will be overwritten when `paper.tex` is compiled.
++ The file `paper.bbl` is not required, but it illustrates the bibliography produced by the template. It will be overwritten when `paper.tex` is compiled. A copy of that file is also included in the `arxiv` folder.
++ The file `paper.aux` is not required for the paper template, but it is necessary to produce the online appendix out of the box, so I keep it in the repository. It will be overwritten when `paper.tex` is compiled.
 
 ## Online appendix
 
@@ -29,18 +34,23 @@ The repository also includes files to produce an online appendix—in case the p
 + Start editing the LaTeX file `appendix.tex` to replace the boilerplate content with the content of your online appendix. 
 + The equation and section labels from `paper.tex` can be used in `appendix.tex`. [This requires the following](https://www.ctan.org/pkg/xr):
 	+ The file `appendix.tex` is in the same folder as `paper.tex`.
-	+ The file `paper.tex` is compiled first.
-	+ The auxiliary file `paper.aux` is available when `appendix.tex` is compiled.
+	+ The file `paper.tex` is compiled first, to create the auxiliary file `paper.aux`.
+	+ The file `paper.aux` is available when `appendix.tex` is compiled.
 + Compile `appendix.tex` with pdfTeX. This generates a PDF file of your appendix named `appendix.pdf`.
 + The LaTeX style file `appendix.sty` formats the online appendix, in conjunction with `paper.sty`. Both style files must be included in the same folder as `appendix.tex`.
-+ The file `appendix.pdf` is not required to use the template. It only illustrates the output of the template and will be overwritten when `appendix.tex` is compiled.
+
+A few files are not required to use the appendix template but are useful for other purposes:
+
++ The file `appendix.pdf` is not required, but it illustrates the output of the template. It will be overwritten when `appendix.tex` is compiled.
++ The file `appendix.bbl` is not required, but it illustrates the bibliography produced by the template. It will be overwritten when `appendix.tex` is compiled.
++ The file `appendix.aux` is not required, but it illustrates the references and links underlying the appendix. It will be overwritten when `appendix.tex` is compiled.
 
 ## Submission to arXiv
 
 The template is perfectly compatible with [arXiv](https://arxiv.org/). After being compiled with pdfTeX, a paper based on the template can be submitted to arXiv in three steps:
 
-1. Adjust the preamble of `paper.tex`. On line 3, replace `\bibliographystyle{bibliography}` by `\pdfoutput=1`. The `\bibliographystyle{bibliography}` command is not needed because arXiv produces the bibliography from the `paper.bbl` file. The `\pdfoutput=1` is required because the paper is compiled with pdfTeX.
-2. Collect the required files into a folder. There should be four files: the source file `paper.tex`, the bibliography file `paper.bbl`, the style file `paper.sty`, and the figure file `figures.pdf`. 
+1. Collect the required files into a folder. There should be four files: the source file `paper.tex`, the bibliography file `paper.bbl`, the style file `paper.sty`, and the figure file `figures.pdf`. The file `bibliography.bib` should not be included as arXiv will use `paper.bbl` to produce the bibliography.
+2. Adjust the preamble of `paper.tex`. On line 3, replace `\bibliographystyle{bibliography}` by `\pdfoutput=1`. The `\bibliographystyle{bibliography}` command is not needed because arXiv produces the bibliography from the `paper.bbl` file. The `\pdfoutput=1` is required because the paper is compiled with pdfTeX.
 3. Zip the folder and upload the zipped folder to arXiv.
 
 The `arXiv` folder illustrates how the template should be prepared for submission to arXiv. The folder contains the four required files: `paper.tex`, `paper.bbl`, `paper.sty`, and `figures.pdf`. Furthermore, the preamble of `paper.tex` is adjusted appropriately. After being zipped, the folder could be uploaded to arXiv and would compile properly.

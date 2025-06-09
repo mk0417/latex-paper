@@ -47,7 +47,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \subsection{Subsection with references from the main text} 
 
-The references from the main text (in the \texttt{paper.tex} file) are available in the online appendix as long as the appendix is compiled after the main text and intermediary LaTeX-related files (especially the \texttt{paper.aux} file) are not deleted. Here are some references to the main text: equation \ref{e:type1} was very helpful; figure \ref{f:graph1} provided a lot of information---especially the plot on figure \ref{f:panel2}; section \ref{s:graphs} presented new results, and so did section \ref{s:lists}. Table~\ref{t:table1} contained interesting information.
+The references from the main text (in the \texttt{paper.tex} file) are available in the online appendix as long as the appendix is compiled after the main text and the auxiliary LaTeX file \texttt{paper.aux} is available. Here are some references to the main text: equation \ref{e:type1} was very helpful; figure \ref{f:graph1} provided a lot of information---especially the plot on figure \ref{f:panel2}; section \ref{s:graphs} presented new results, and so did section \ref{s:lists}. Table~\ref{t:table1} contained interesting information.
 
 \subsection{Subsection with assumptions and results}
 
@@ -114,7 +114,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \subsection{Subsection with references}\label{a:subappendix}
 
-Here is a sentence with some citations: \citet{MS19,MS21b} found something but that is an uncommon result \citep[chapter 5]{M12}. It is also possible to cite the authors of a study by name, or the year of a study: for instance, \citeauthor{EMM21} wrote a paper in \citeyear{EMM21} (see also the paper by \citealp{M14}). The references go to their own reference list at the end of the appendix. By contrast, when the appendix is at the end of the main text, the appendix shares the list of references with the main text. 
+Here is a sentence with some citations: \citet{MS19,MS21} found something but that is an uncommon result \citep[chapter 5]{M12}. It is also possible to cite the authors of a study by name, or the year of a study: for instance, \citeauthor{EMM21} wrote a paper in \citeyear{EMM21} (see also the paper by \citealp{M14}). The references go to their own reference list at the end of the appendix. By contrast, when the appendix is at the end of the main text, the appendix shares the list of references with the main text. 
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -125,7 +125,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \subsection{Subsection with a URL}
 
-Here is a URL: \url{https://github.com/pmichaillat/latex-paper}. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+Here is an URL: \url{https://github.com/pmichaillat/latex-paper}. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
